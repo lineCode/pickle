@@ -1,0 +1,23 @@
+language: cpp
+
+# os:
+  # - windows
+  # - linux
+  # - osx
+
+matrix:
+  include:
+    - os: windows
+    - os: linux
+      env:
+        - PLATFORM_NAME="linux"
+    - os: osx
+      compiler: clang
+      env:
+        - PLATFORM_NAME="darwin"
+
+before_install:
+  - if [ "$TRAVIS_OS_NAME" != "windows" ]; then chmod +x ./build.sh; fi
+script:
+  - cmake --version
+  - if [ "$TRAVIS_OS_NAME" = "windows" ]; then ./build.bat; else ./build.sh; fi
