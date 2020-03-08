@@ -1,5 +1,17 @@
 {
   "name": "@ccpm/pickle",
   "version": "1.0.0",
-  "main": "index.js"
+  "description": "Chromium Pickle class.",
+  "main": "index.js",
+  "author": "toyobayashi",
+  "license": "MIT",
+  "keywords": ["pickle"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toyobayashi/pickle.git"
+  },
+  "homepage": "https://github.com/toyobayashi/pickle#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
