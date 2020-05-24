@@ -5,6 +5,21 @@
 #ifndef BASE_PICKLE_H__
 #define BASE_PICKLE_H__
 
+#define CHECK(expression) \
+  do { \
+    if (!(expression)) abort(); \
+  } while (0)
+
+#define CHECK_EQ(a, b) CHECK((a) == (b))
+#define CHECK_LE(a, b) CHECK((a) <= (b))
+#define CHECK_GE(a, b) CHECK((a) >= (b))
+#define CHECK_NE(a, b) CHECK((a) != (b))
+
+#define DCHECK(condition) CHECK(condition)
+#define DCHECK_EQ(val1, val2) CHECK_EQ(val1, val2)
+#define DCHECK_LE(val1, val2) CHECK_LE(val1, val2)
+#define DCHECK_GE(val1, val2) CHECK_GE(val1, val2)
+
 #include "build_config.h"
 
 #if defined(COMPILER_GCC)

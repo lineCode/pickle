@@ -2,21 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#define CHECK(expression) \
-  do { \
-    if (!(expression)) abort(); \
-  } while (0)
-
-#define CHECK_EQ(a, b) CHECK((a) == (b))
-#define CHECK_LE(a, b) CHECK((a) <= (b))
-#define CHECK_GE(a, b) CHECK((a) >= (b))
-#define CHECK_NE(a, b) CHECK((a) != (b))
-
-#define DCHECK(condition) CHECK(condition)
-#define DCHECK_EQ(val1, val2) CHECK_EQ(val1, val2)
-#define DCHECK_LE(val1, val2) CHECK_LE(val1, val2)
-#define DCHECK_GE(val1, val2) CHECK_GE(val1, val2)
-
 #define NOTREACHED() DCHECK(false)
 
 #include "pickle/pickle.hpp"
